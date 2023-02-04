@@ -3,8 +3,6 @@ data "template_file" "user_data" {
 
   vars = {
     tool = var.tool
-    ssh_private_key = var.ssh_private_key
-    ssh_pub_key = var.ssh_pub_key
   }
 }
 

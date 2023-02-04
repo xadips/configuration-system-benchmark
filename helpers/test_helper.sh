@@ -10,6 +10,7 @@ elif [ $1 == "salt" ]
 then
     echo "TODO"
 elif [ $1 == "chef" ]
+then
     echo "TODO"
 else
     echo "Unkown configuration tool" >> output.log
