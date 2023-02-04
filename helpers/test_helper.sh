@@ -5,9 +5,9 @@ FILENAME="$1-output-$TIMESTAMP.log"
 
 if [ -z "$2" ]
 then
-    TEST = "*.yml"
+    TEST="/root/kursinis-benchmark/test/"$1"/*.yml"
 else
-    TEST = `ls /root/kursinis-benchmark/test/ansible/$2-*.yml`
+    TEST=`ls /root/kursinis-benchmark/test/"$1"/"$2"-*.yml`
 fi
 
 if [ $1 == "ansible" ]

@@ -17,4 +17,9 @@ variable "tool" {
     default = "ansible"
 }
 
+variable "test" {
+    type = string
+    default = "1"
+}
+
 
