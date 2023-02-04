@@ -3,7 +3,9 @@
   connection: local
   tasks:
     - name: Create the test group
-      group: name=test
+      group:
+        name: ubuntu
+        state: present
       become: true
 
     - name: Create ubuntu user
