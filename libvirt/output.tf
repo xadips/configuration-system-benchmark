@@ -2,3 +2,4 @@
 output "ipv4" {
   value = libvirt_domain.domain-ubuntu.*.network_interface.0.addresses
 }
+

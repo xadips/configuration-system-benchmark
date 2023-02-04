@@ -19,7 +19,7 @@ variable "tool" {
 
 variable "test" {
     type = string
-    default = "1"
+    default = "2"
 }
 
 
