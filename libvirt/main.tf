@@ -19,7 +19,6 @@ resource "libvirt_pool" "ubuntu" {
 }
 
 
-variable "diskBytes" { default = 1024*1024*1024*10 }
 # We fetch the latest ubuntu release image from their mirrors
 resource "libvirt_volume" "base-ubuntu-qcow2" {
   name   = "base-ubuntu-qcow2"
@@ -37,14 +36,6 @@ resource "libvirt_volume" "ubuntu-qcow2" {
 }
 
 
-data "template_file" "user_data" {
-  template = file("${path.module}/cloud_init.cfg")
-}
-
-data "template_file" "network_config" {
-  template = file("${path.module}/network_config.cfg")
-}
-
 # https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/website/docs/r/cloudinit.html.markdown
 resource "libvirt_cloudinit_disk" "commoninit" {
   name           = "commoninit.iso"
@@ -56,8 +47,8 @@ resource "libvirt_cloudinit_disk" "commoninit" {
 # Create the machine
 resource "libvirt_domain" "domain-ubuntu" {
   name   = "ubuntu-terraform"
-  memory = "1024"
-  vcpu   = 1
+  memory = "4096"
+  vcpu   = 2
 
   cloudinit = libvirt_cloudinit_disk.commoninit.id
 
