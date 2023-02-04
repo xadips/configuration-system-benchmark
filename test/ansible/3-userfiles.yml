@@ -1,0 +1,502 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Create the test group
+      group: name=test
+      become: true
+
+    - name: Creates directory test1
+      file:
+        path: /tmp/test1
+        state: directory
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test1 in directory1
+      file:
+        path: /tmp/test1/test1.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test2 in directory1
+      file:
+        path: /tmp/test1/test2.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test3 in directory1
+      file:
+        path: /tmp/test1/test3.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test4 in directory1
+      file:
+        path: /tmp/test1/test4.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test5 in directory1
+      file:
+        path: /tmp/test1/test5.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test6 in directory1
+      file:
+        path: /tmp/test1/test6.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test7 in directory1
+      file:
+        path: /tmp/test1/test7.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test8 in directory1
+      file:
+        path: /tmp/test1/test8.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test9 in directory1
+      file:
+        path: /tmp/test1/test9.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test10 in directory1
+      file:
+        path: /tmp/test1/test10.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates directory test2
+      file:
+        path: /tmp/test2
+        state: directory
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test1 in directory2
+      file:
+        path: /tmp/test2/test1.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test2 in directory2
+      file:
+        path: /tmp/test2/test2.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test3 in directory2
+      file:
+        path: /tmp/test2/test3.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test4 in directory2
+      file:
+        path: /tmp/test2/test4.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test5 in directory2
+      file:
+        path: /tmp/test2/test5.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test6 in directory2
+      file:
+        path: /tmp/test2/test6.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test7 in directory2
+      file:
+        path: /tmp/test2/test7.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test8 in directory2
+      file:
+        path: /tmp/test2/test8.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test9 in directory2
+      file:
+        path: /tmp/test2/test9.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test10 in directory2
+      file:
+        path: /tmp/test2/test10.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates directory test3
+      file:
+        path: /tmp/test3
+        state: directory
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test1 in directory3
+      file:
+        path: /tmp/test3/test1.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test2 in directory3
+      file:
+        path: /tmp/test3/test2.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test3 in directory3
+      file:
+        path: /tmp/test3/test3.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test4 in directory3
+      file:
+        path: /tmp/test3/test4.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test5 in directory3
+      file:
+        path: /tmp/test3/test5.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test6 in directory3
+      file:
+        path: /tmp/test3/test6.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test7 in directory3
+      file:
+        path: /tmp/test3/test7.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test8 in directory3
+      file:
+        path: /tmp/test3/test8.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test9 in directory3
+      file:
+        path: /tmp/test3/test9.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test10 in directory3
+      file:
+        path: /tmp/test3/test10.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates directory test4
+      file:
+        path: /tmp/test4
+        state: directory
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test1 in directory4
+      file:
+        path: /tmp/test4/test1.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test2 in directory4
+      file:
+        path: /tmp/test4/test2.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test3 in directory4
+      file:
+        path: /tmp/test4/test3.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test4 in directory4
+      file:
+        path: /tmp/test4/test4.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test5 in directory4
+      file:
+        path: /tmp/test4/test5.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test6 in directory4
+      file:
+        path: /tmp/test4/test6.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test7 in directory4
+      file:
+        path: /tmp/test4/test7.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test8 in directory4
+      file:
+        path: /tmp/test4/test8.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test9 in directory4
+      file:
+        path: /tmp/test4/test9.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test10 in directory4
+      file:
+        path: /tmp/test4/test10.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates directory test5
+      file:
+        path: /tmp/test5
+        state: directory
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test1 in directory5
+      file:
+        path: /tmp/test5/test1.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test2 in directory5
+      file:
+        path: /tmp/test5/test2.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test3 in directory5
+      file:
+        path: /tmp/test5/test3.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test4 in directory5
+      file:
+        path: /tmp/test5/test4.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test5 in directory5
+      file:
+        path: /tmp/test5/test5.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test6 in directory5
+      file:
+        path: /tmp/test5/test6.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test7 in directory5
+      file:
+        path: /tmp/test5/test7.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test8 in directory5
+      file:
+        path: /tmp/test5/test8.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test9 in directory5
+      file:
+        path: /tmp/test5/test9.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
+
+    - name: Creates file test10 in directory5
+      file:
+        path: /tmp/test5/test10.txt
+        state: touch
+        group: ubuntu
+        owner: ubuntu
+        mode: 0775
+      become: true
