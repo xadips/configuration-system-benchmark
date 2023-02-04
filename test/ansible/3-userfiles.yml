@@ -6,6 +6,15 @@
       group: name=test
       become: true
 
+    - name: Create ubuntu user
+      user:
+        name: ubuntu
+        shell: /bin/bash
+        group: test
+        append: yes
+        state: present
+      become: true
+
     - name: Creates directory test1
       file:
         path: /tmp/test1
