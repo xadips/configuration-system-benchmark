@@ -12,7 +12,7 @@
       user:
         name: ubuntu
         shell: /bin/bash
-        group: test
+        group: ubuntu
         append: yes
         state: present
       become: true
