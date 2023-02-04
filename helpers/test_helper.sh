@@ -1,6 +1,6 @@
 #!/bin/bash
 # TODO add test picking/running all
-TIMESTAMP=`date +%y-%m-%d-%H-%M-%S-.%4N`
+TIMESTAMP=`date +%y-%m-%d-%H-%M-%S-%3N`
 FILENAME="$1-output-$TIMESTAMP.log"
 if [ $1 == "ansible" ]
 then
