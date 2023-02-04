@@ -18,6 +18,7 @@ then
         scp -o StrictHostKeyChecking=no -P 9889 -i /etc/ssh/ssh_host_ed25519_key "$FILENAME" o0d4@192.168.122.1:/home/o0d4/Programming/kursinis-benchmark/logs/
     else
         echo "You'll have to sync it yourself"
+    fi
 elif [ $1 == "salt" ]
 then
     echo "TODO"
