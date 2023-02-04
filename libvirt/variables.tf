@@ -1,11 +1,12 @@
 
 variable "diskBytes" {
     type = number
-    default = 1024*1024*1024*10 
+    default = 1024*1024*1024*4
 }
 
 variable "vm_count" {
     type = number
+    # Set your vm count here
     default = 3
 }
 
@@ -15,4 +16,5 @@ variable "tool" {
     # Supported ansible, salt, chef
     default = "ansible"
 }
+
 
