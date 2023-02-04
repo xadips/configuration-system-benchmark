@@ -13,7 +13,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -23,7 +23,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -33,7 +33,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -43,7 +43,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -53,7 +53,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -63,7 +63,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -73,7 +73,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -83,7 +83,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -93,7 +93,7 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
 
@@ -103,6 +103,6 @@
         shell: /bin/bash
         group: test
         append: yes
-        comment: "thesis user"
+        comment: "kursinio testavimo darbas"
         state: present
       become: true
