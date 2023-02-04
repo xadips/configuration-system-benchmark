@@ -1,7 +1,7 @@
 #!/bin/bash
 # TODO add test picking/running all
 TIMESTAMP=`date +%y-%m-%d-%H-%M-%S`
-FILENAME="output-$TIMESTAMP.log"
+FILENAME="$1-output-$TIMESTAMP.log"
 if [ $1 == "ansible" ]
 then
     (time ansible-playbook /root/kursinis-benchmark/test/ansible/1-users.yml) >> "$FILENAME" 2>&1
