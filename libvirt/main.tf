@@ -49,8 +49,8 @@ resource "libvirt_cloudinit_disk" "commoninit" {
 resource "libvirt_domain" "domain-ubuntu" {
   count = var.vm_count
   name   = "ubuntu-terraform-${count.index}"
-  memory = "1024"
-  vcpu   = 1
+  memory = var.vm_memory 
+  vcpu   = var.vcpu_count
 
   cloudinit = libvirt_cloudinit_disk.commoninit.id
 

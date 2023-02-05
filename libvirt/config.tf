@@ -4,6 +4,7 @@ data "template_file" "user_data" {
   vars = {
     tool = var.tool
     test = var.test
+    runtime = var.runtime
   }
 }
 
