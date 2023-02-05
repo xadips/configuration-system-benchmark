@@ -19,7 +19,7 @@ elif [ $1 == "salt" ]
 then
     wget -O - https://bootstrap.saltproject.io | sh
     sed -i 's/#file_client: remote/file_client: local/g' /etc/salt/minion
-    mkdir -P /srv/salt
+    mkdir -p /srv/salt
     cp /root/kursinis-benchmark/test/salt/top.sls /srv/salt/top.sls
     cp /root/kursinis-benchmark/test/salt/$2-*.sls /srv/salt/current_test.sls
     (/usr/bin/time -f '%U %S' salt-call --local state.apply) > "$FILENAME" 2> /tmp/timings
