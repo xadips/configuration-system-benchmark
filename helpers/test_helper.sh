@@ -30,8 +30,6 @@ then
     git config --global user.name 'tester'
     chef-solo --chef-license=accept-silent
     chef generate cookbook test --chef-license=accept-silent
-    mv kursinis-benchmark/test/chef/solo.rb /root/solo.rb
-    mv kursinis-benchmark/test/chef/node.json /root/node.json
     mv kursinis-benchmark/test/chef/$2-*.rb /root/test/recipes/default.rb
     (/usr/bin/time -f '%U %S' chef-solo -c kursinis-benchmark/test/chef/solo.rb -j kursinis-benchmark/test/chef/node.json) > "$FILENAME" 2> /tmp/timings
 else
