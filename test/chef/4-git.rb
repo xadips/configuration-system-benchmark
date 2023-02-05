@@ -6,6 +6,6 @@ end
 
 git '/tmp/repo2' do
     repository 'https://github.com/kubernetes/kubernetes.git'
-    revision 'main'
+    revision 'master'
     action :sync
 end
