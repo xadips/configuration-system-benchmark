@@ -19,7 +19,7 @@ variable "tool" {
 
 variable "test" {
     type = string
-    default = "2"
+    default = "3"
 }
 
 variable "host_ip"  {
