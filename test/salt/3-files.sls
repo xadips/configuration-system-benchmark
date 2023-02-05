@@ -1,15 +1,18 @@
-ubuntu:
-  user.present:
-    - shell: /bin/bash
-    - home: /home/ubuntu
-    - uid: 4001
-
-ubuntu:
+ubuntu-group:
   group.present:
+    - name: ubuntu
     - gid: 7648
     - system: True
     - addusers:
       - ubuntu
+
+ubuntu-user:
+  user.present:
+    - name: ubuntu
+    - shell: /bin/bash
+    - home: /home/ubuntu
+    - uid: 4001
+
 
 /tmp/test1:
   file.directory:
