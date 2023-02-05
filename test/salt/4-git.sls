@@ -1,4 +1,4 @@
-dave_repo:
+my_repo:
   git.latest:
     - name: https://github.com/xadips/kursinis-benchmark
     - target: /tmp/repo
