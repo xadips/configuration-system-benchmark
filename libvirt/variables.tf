@@ -17,15 +17,16 @@ variable "tool" {
     default = "salt"
 }
 
+variable "host_ip"  {
+    type = string
+    # 192.168.122.1
+    #
+    default = "192.168.122.1"
+}
+
 variable "test" {
     type = string
     default = "1"
-}
-
-variable "runtime" {
-    type = string
-    # libvirt or digitalocean
-    default = "libvirt"
 }
 
 variable "vm_memory" {
@@ -37,5 +38,7 @@ variable "vcpu_count" {
     type = number
     default = 3
 }
+
+
 
 

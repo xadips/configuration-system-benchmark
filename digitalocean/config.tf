@@ -1,10 +1,10 @@
 data "template_file" "user_data" {
-  template = file("${path.module}/cloud_init_${var.tool}.cfg")
+  template = file("${path.module}/../initconf/cloud_init_${var.tool}.cfg")
 
   vars = {
     tool = var.tool
     test = var.test
-    runtime = var.runtime
+    host_ip = var.host_ip
   }
 }
 
