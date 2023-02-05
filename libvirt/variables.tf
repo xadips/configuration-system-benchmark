@@ -7,19 +7,19 @@ variable "diskBytes" {
 variable "vm_count" {
     type = number
     # Set your vm count here
-    default = 3
+    default = 1
 }
 
 variable "tool" {
     type = string
     # Change your tool name here
     # Supported ansible, salt, chef
-    default = "salt"
+    default = "ansible"
 }
 
 variable "test" {
     type = string
-    default = "4"
+    default = "2"
 }
 
 variable "host_ip"  {
