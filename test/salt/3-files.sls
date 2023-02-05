@@ -3,8 +3,6 @@ ubuntu-group:
     - name: ubuntu
     - gid: 7648
     - system: True
-    - addusers:
-      - ubuntu
 
 ubuntu-user:
   user.present:
@@ -12,7 +10,8 @@ ubuntu-user:
     - shell: /bin/bash
     - home: /home/ubuntu
     - uid: 4001
-
+    - groups:
+        - ubuntu
 
 /tmp/test1:
   file.directory:
