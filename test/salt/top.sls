@@ -1,0 +1,3 @@
+base:
+  '*':
+    - current_test
