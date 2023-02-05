@@ -1,7 +1,7 @@
 
 variable "diskBytes" {
     type = number
-    default = 1024*1024*1024*4
+    default = 1024*1024*1024*8
 }
 
 variable "vm_count" {
@@ -14,12 +14,12 @@ variable "tool" {
     type = string
     # Change your tool name here
     # Supported ansible, salt, chef
-    default = "ansible"
+    default = "chef"
 }
 
 variable "test" {
     type = string
-    default = "2"
+    default = "1"
 }
 
 variable "host_ip"  {
@@ -31,12 +31,12 @@ variable "host_ip"  {
 
 variable "vm_memory" {
     type = string
-    default = "1024"
+    default = "4096"
 }
 
 variable "vcpu_count" {
     type = number
-    default = 1
+    default = 4
 }
 
 
