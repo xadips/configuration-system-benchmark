@@ -7,7 +7,7 @@ variable "diskBytes" {
 variable "vm_count" {
     type = number
     # Set your vm count here
-    default = 1
+    default = 3
 }
 
 variable "tool" {
@@ -17,6 +17,11 @@ variable "tool" {
     default = "salt"
 }
 
+variable "test" {
+    type = string
+    default = "2"
+}
+
 variable "host_ip"  {
     type = string
     # 192.168.122.1
@@ -24,19 +29,14 @@ variable "host_ip"  {
     default = "192.168.122.1"
 }
 
-variable "test" {
-    type = string
-    default = "1"
-}
-
 variable "vm_memory" {
     type = string
-    default = "4096"
+    default = "1024"
 }
 
 variable "vcpu_count" {
     type = number
-    default = 3
+    default = 1
 }
 
 
