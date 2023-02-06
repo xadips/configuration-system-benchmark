@@ -1,6 +1,5 @@
 *.terraform/*
 *.terraform.*
-variables.tf
 terraform.tfstate*
 secret
 logs/*

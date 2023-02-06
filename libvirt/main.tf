@@ -23,6 +23,7 @@ resource "libvirt_pool" "ubuntu" {
 resource "libvirt_volume" "base-ubuntu-qcow2" {
   name   = "base-ubuntu-qcow2"
   pool   = libvirt_pool.ubuntu.name
+  # Testing framework was made with ubuntu-LTS 20.04 in mind
   source = "https://cloud-images.ubuntu.com/daily/server/focal/current/focal-server-cloudimg-amd64.img"
   format = "qcow2"
 }
