@@ -2,11 +2,6 @@ variable "do_token" {
     type = string 
     default = "do token" 
 }
-variable "pvt_key" {
-    type = string
-    # Private key location on running machine
-    default = "/home/random/.ssh/id_rsa"
-}
 
 variable "vm_count" {
     type = number
@@ -26,12 +21,6 @@ variable "test" {
     type = string
     default = "5"
 }
-
-variable "ssh_pub_key"{
-    type = string
-    default = ""
-}
-
 
 variable "host_ip" {
     type = string
