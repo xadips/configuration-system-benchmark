@@ -8,14 +8,14 @@ variable "diskBytes" {
 variable "vm_count" {
     type = number
     # Set your vm count here
-    default = 3
+    default = 1
 }
 
 variable "tool" {
     type = string
     # Change your tool name here
-    # Supported ansible, salt, chef
-    default = "chef"
+    # Supported ansible, salt, chef, puppet
+    default = "ansible"
 }
 
 variable "test" {
@@ -28,7 +28,7 @@ variable "host_ip"  {
     type = string
     # 192.168.122.1
     #
-    default = "HOST ip where to send timings"
+    default = "192.168.122.1"
 }
 
 variable "ssh_pub_key"{
