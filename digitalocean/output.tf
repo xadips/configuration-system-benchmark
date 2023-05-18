@@ -1,3 +1,3 @@
 output "droplet_ip_addresses" {
-  value = digitalocean_droplet.ubuntu-do.*.ipv4_address
+  value = digitalocean_droplet.debian-do.*.ipv4_address
 }

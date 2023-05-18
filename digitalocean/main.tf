@@ -16,10 +16,10 @@ data "digitalocean_ssh_key" "terraform" {
 }
 
 
-resource "digitalocean_droplet" "ubuntu-do" {
+resource "digitalocean_droplet" "debian-do" {
     count = var.vm_count
-    image = "ubuntu-20-04-x64"
-    name = "ubuntu-${count.index}"
+    image = "debian-10-x64"
+    name = "debian-${count.index}"
     region = "fra1"
     size = "s-1vcpu-1gb"
     ssh_keys = [

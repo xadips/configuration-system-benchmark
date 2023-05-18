@@ -11,7 +11,7 @@ variable "pvt_key" {
 variable "vm_count" {
     type = number
     # Set your vm count here
-    default = 9
+    default = 1
 }
 
 
@@ -19,7 +19,7 @@ variable "tool" {
     type = string
     # Change your tool name here
     # Supported ansible, salt, chef
-    default = "chef"
+    default = "ansible"
 }
 
 variable "test" {
@@ -29,7 +29,7 @@ variable "test" {
 
 variable "ssh_pub_key"{
     type = string
-    default = "enter ur key"
+    default = ""
 }
 
 
