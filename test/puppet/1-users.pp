@@ -1,40 +1,40 @@
-myuser { 'user1':
+user { 'user1':
   password   => 'user',
 }
 
-myuser { 'user2':
+user { 'user2':
   password   => 'user',
 }
 
-myuser { 'user3':
+user { 'user3':
   password   => 'user',
 }
 
-myuser { 'user4':
+user { 'user4':
   password   => 'user',
 }
 
-myuser { 'user5':
+user { 'user5':
   password   => 'user',
 }
 
-myuser { 'user6':
+user { 'user6':
   password   => 'user',
 }
 
-myuser { 'user7':
+user { 'user7':
   password   => 'user',
 }
 
-myuser { 'user8':
+user { 'user8':
   password   => 'user',
 }
 
-myuser { 'user9':
+user { 'user9':
   password   => 'user',
 }
 
-myuser { 'user10':
+user { 'user10':
   password   => 'user',
 }
 
