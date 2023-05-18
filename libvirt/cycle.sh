@@ -1,10 +1,10 @@
 #!/bin/zsh
 # Simple script to re-run testing quicker
-rm -f timings.txt
-terraform init
+#rm -f timings.txt
 terraform plan -var-file="temp.tfvars"
-touch timings.txt
-ncat -k -l -p 9566 >> timings.txt &
+# touch timings.txt
+# ncat -k -l -p 9566 >> timings.txt &
+bash work.sh
 terraform apply -var-file="temp.tfvars" -auto-approve
 VM_COUNT=$(grep vm_count temp.tfvars | awk {'print $3'})
 ANS_COUNT=0

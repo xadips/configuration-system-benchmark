@@ -2,7 +2,7 @@
 variable "diskBytes" {
     type = number
     # 1024^3 GB * N = how many GB you want in your VM
-    default = 1024*1024*1024*8
+    default = 1024*1024*1024*10
 }
 
 variable "vm_count" {
@@ -27,7 +27,6 @@ variable "test" {
 variable "host_ip"  {
     type = string
     # 192.168.122.1
-    #
     default = "192.168.122.1"
 }
 
