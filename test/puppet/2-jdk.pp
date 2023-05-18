@@ -1,4 +1,4 @@
 class { 'java':
-  jdk     => true, # default - jre or jdk
+  distribution => 'jdk', # jre or jdk
   version => '8', # Java version
 }
