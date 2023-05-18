@@ -17,6 +17,12 @@ variable "tool" {
     default = "salt"
 }
 
+variable "ssh_pub_key" {
+    # placeholder for other providers
+    type = string
+    default = ""
+}
+
 variable "test" {
     type = string
     default = "5"
