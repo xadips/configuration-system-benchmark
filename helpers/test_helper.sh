@@ -43,4 +43,5 @@ else
     echo "Unkown configuration tool" >> output.log
 fi
 
-grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}' | nc $HOST_IP 9566
+sleep 1
+grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}' | nc "$HOST_IP" 9566
