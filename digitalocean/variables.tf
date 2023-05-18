@@ -13,8 +13,8 @@ variable "vm_count" {
 variable "tool" {
     type = string
     # Change your tool name here
-    # Supported ansible, salt, chef
-    default = "ansible"
+    # Supported ansible, salt, chef, puppet
+    default = "salt"
 }
 
 variable "test" {

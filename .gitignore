@@ -4,3 +4,4 @@ terraform.tfstate*
 secret
 logs/*
 *.txt
+*.tfvars
