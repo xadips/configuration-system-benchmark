@@ -13,7 +13,7 @@ then
         TEST=`ls /root/kursinis-benchmark/test/"$1"/"$2"-*.yml`
     fi
     (/usr/bin/time -f '%U %S' ansible-playbook "$TEST") > "$FILENAME" 2> /tmp/timings
-
+    grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}' | nc "$HOST_IP" 9566
 elif [ $1 == "salt" ]
 then
     wget -O - https://bootstrap.saltproject.io | sh
@@ -42,5 +42,3 @@ then
 else
     echo "Unkown configuration tool" >> output.log
 fi
-
-grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}' | nc "$HOST_IP" 9566
