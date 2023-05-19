@@ -1,5 +1,6 @@
 #!/bin/zsh
 # Simple script to re-run testing quicker
+rm -f result.txt
 for i in {1.."$1"}
 do
     rm -f timings.txt
@@ -17,7 +18,7 @@ do
         echo "$VM_COUNT"
     done
     echo "done"
-    terraform destroy -var-file="temp.tfvars" -auto-approve
+    #terraform destroy -var-file="temp.tfvars" -auto-approve
     cat timings.txt >> result.txt
     rm -f timings.txt
     killall -q ncat
