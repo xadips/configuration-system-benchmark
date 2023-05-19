@@ -29,6 +29,6 @@ variable "host_ip" {
 }
 
 variable "port" {
-    type number
+    type = number
     default = 0
 }

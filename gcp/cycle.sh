@@ -6,6 +6,7 @@ do
     rm -f timings.txt
     touch timings.txt
     ncat -k -l -p "$PORT" >> timings.txt &
+    PID="$!"
     terraform plan -var-file="temp.tfvars"
     terraform apply -var-file="temp.tfvars" -auto-approve
     VM_COUNT=$(grep vm_count temp.tfvars | awk {'print $3'})
@@ -21,5 +22,5 @@ do
     terraform destroy -var-file="temp.tfvars" -auto-approve
     cat timings.txt >> result.txt
     rm -f timings.txt
-    killall -q ncat
+    kill "$PID"
 done

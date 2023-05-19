@@ -1,7 +1,7 @@
 provider "google" {
   project = "configuration-benchmark"
-  region  = "europe-central2"
-  zone    = "europe-central2-b"
+  region  = "europe-west2"
+  zone    = "europe-west3-a"
 }
 
 resource "google_compute_instance" "debian_instance" {
