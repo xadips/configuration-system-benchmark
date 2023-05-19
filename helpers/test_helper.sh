@@ -35,7 +35,6 @@ elif [ $1 == "puppet" ]
 then
     TEST=`ls /root/kursinis-benchmark/test/"$1"/"$2"-*.pp`
     sed -i '/master/,+3d' /etc/puppet/puppet.conf
-    puppet module install puppetlabs-java --version 6.0.0
     puppet module install puppetlabs-git --version 0.5.0
     (/usr/bin/time -f '%U %S' puppet apply "$TEST") > "$FILENAME" 2> /tmp/timings
 else

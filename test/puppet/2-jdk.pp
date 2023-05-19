@@ -1,3 +1,8 @@
-class { 'java':
-  distribution => 'jdk', # jre or jdk
+class java {
+
+  package { 'openjdk-11-jdk':
+    ensure => 'installed',
+  }
 }
+
+include java
