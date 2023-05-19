@@ -27,3 +27,8 @@ variable "host_ip" {
     type = string
     default = "enter ur ip"
 }
+
+variable "port" {
+    type number
+    default = 0
+}

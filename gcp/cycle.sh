@@ -1,11 +1,11 @@
 #!/bin/zsh
 # Simple script to re-run testing quicker
-rm -f result.txt
+PORT=$(grep port temp.tfvars | awk {'print $3'})
 for i in {1.."$1"}
 do
     rm -f timings.txt
     touch timings.txt
-    ncat -k -l -p 9566 >> timings.txt &
+    ncat -k -l -p "$PORT" >> timings.txt &
     terraform plan -var-file="temp.tfvars"
     terraform apply -var-file="temp.tfvars" -auto-approve
     VM_COUNT=$(grep vm_count temp.tfvars | awk {'print $3'})

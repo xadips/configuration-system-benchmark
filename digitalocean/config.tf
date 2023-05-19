@@ -6,6 +6,7 @@ data "template_file" "user_data" {
     tool = var.tool
     test = var.test
     host_ip = var.host_ip
+    port = var.port
   }
 }
 

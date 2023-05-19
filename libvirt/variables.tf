@@ -45,6 +45,11 @@ variable "vcpu_count" {
     default = 1
 }
 
+variable "port" {
+    type = number
+    default = 0
+}
+
 
 
 

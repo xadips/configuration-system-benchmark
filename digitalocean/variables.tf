@@ -32,3 +32,8 @@ variable "host_ip" {
     type = string
     default = "ip to send timigns via tcp"
 }
+
+variable "port" {
+    type = number
+    default = 0
+}

@@ -2,6 +2,7 @@
 TIMESTAMP=`date +%y-%m-%d-%H-%M-%S-%3N`
 FILENAME="$1-output-$TIMESTAMP.log"
 HOST_IP=$3
+PORT=$4
 
 
 if [ $1 == "ansible" ]
@@ -42,4 +43,4 @@ else
 fi
 
 TIMING=$(grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}')
-echo "$TIMING" | nc "$HOST_IP" 9566 >> output.log
+echo "$TIMING" | nc "$HOST_IP" "$PORT" >> output.log

@@ -6,6 +6,7 @@ data "template_file" "user_data" {
     test = var.test
     host_ip = var.host_ip
     ssh_pub_key = var.ssh_pub_key
+    port = var.port
   }
 }
 
