@@ -1,4 +1,4 @@
-class screen {
+class apache {
 
   package { 'apache':
     ensure => 'installed',

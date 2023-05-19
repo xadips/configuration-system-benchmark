@@ -18,7 +18,7 @@ do
         echo "$VM_COUNT"
     done
     echo "done"
-    terraform destroy -var-file="temp.tfvars" -auto-approve
+    #terraform destroy -var-file="temp.tfvars" -auto-approve
     cat timings.txt >> result.txt
     rm -f timings.txt
     killall -q ncat
