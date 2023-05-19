@@ -1,1 +1,6 @@
-class { 'apache': }
+class screen {
+
+  package { 'apache':
+    ensure => 'installed',
+  }
+}
