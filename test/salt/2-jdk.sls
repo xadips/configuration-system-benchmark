@@ -1,6 +1,2 @@
-uptodate:
-  pkg.uptodate:
-    - refresh: True
-
-openjdk-8-jdk:
+openjdk-11-jdk:
   pkg.latest

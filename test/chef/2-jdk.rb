@@ -1,3 +1,3 @@
-apt_package 'openjdk-8-jdk' do
+apt_package 'openjdk-11-jdk' do
     action :install
 end
