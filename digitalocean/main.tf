@@ -18,7 +18,7 @@ data "digitalocean_ssh_key" "terraform" {
 
 resource "digitalocean_droplet" "debian-do" {
     count = var.vm_count
-    image = "debian-11-x64"
+    image = "debian-10-x64"
     name = "debian-${count.index}"
     region = "fra1"
     size = "s-1vcpu-1gb"
