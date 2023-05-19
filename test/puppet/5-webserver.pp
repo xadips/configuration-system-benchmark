@@ -1,6 +1,8 @@
 class apache {
 
-  package { 'apache':
+  package { 'apache2':
     ensure => 'installed',
   }
 }
+
+include apache
