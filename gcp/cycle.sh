@@ -1,6 +1,8 @@
 #!/bin/zsh
 # Simple script to re-run testing quicker
 PORT=$(grep port temp.tfvars | awk {'print $3'})
+TOOL=$(grep tool temp.tfvars | awk {'print $3'} | tr -d '"')
+TEST=$(grep test temp.tfvars | awk {'print $3'} | tr -d '"')
 for i in {1.."$1"}
 do
     rm -f timings.txt
@@ -20,7 +22,7 @@ do
     done
     echo "done"
     terraform destroy -var-file="temp.tfvars" -auto-approve
-    cat timings.txt >> result.txt
+    cat timings.txt >> "$TOOL-$TEST.txt"
     rm -f timings.txt
     kill "$PID"
 done

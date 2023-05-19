@@ -1,19 +1,16 @@
 provider "google" {
   project = "configuration-benchmark"
-  region  = "europe-west2"
-  zone    = "europe-west3-a"
+  region  = "europe-central2"
+  zone    = "europe-central2-b"
 }
 
 resource "google_compute_instance" "debian_instance" {
   name = "debian-${count.index}"
   count = var.vm_count
-  machine_type = "t2d-standard-1"
+  machine_type = "n1-standard-2"
 
   boot_disk {
-    initialize_params {
-      image = "global/images/debian-10-cloud-amd64"
-      #image = "ubuntu-os-cloud/ubuntu-2004-focal-v20220712"
-    }
+    source = google_compute_disk.gdisk[count.index].name
   }
 
   network_interface {
@@ -28,4 +25,12 @@ resource "google_compute_instance" "debian_instance" {
   metadata = {
     user-data = data.template_file.user_data.rendered
   }
+}
+
+resource "google_compute_disk" "gdisk" {
+  name  = "gdisk-${count.index}"
+  count = var.vm_count
+  type  = "pd-ssd"
+  image = "global/images/debian-10-cloud-amd64"
+  size = 10
 }
