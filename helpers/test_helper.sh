@@ -42,5 +42,5 @@ else
     echo "Unkown configuration tool" >> output.log
 fi
 
-TIMING=$(grep -E '[0-9]{1,9}.[0-9]{1,4}' /tmp/timings | awk '{s=$1+$2} {print s}')
+TIMING=$(sed -e '/hiera/d' /tmp/timings | grep -E '[0-9]{1,9}.[0-9]{1,4}' | awk '{s=$1+$2} {print s}')
 echo "$TIMING" | nc "$HOST_IP" "$PORT" >> output.log
