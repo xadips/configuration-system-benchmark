@@ -7,7 +7,7 @@ provider "google" {
 resource "google_compute_instance" "debian_instance" {
   name = "debian-${count.index}"
   count = var.vm_count
-  machine_type = "n1-standard-2"
+  machine_type = "n1-standard-1"
 
   boot_disk {
     source = google_compute_disk.gdisk[count.index].name
