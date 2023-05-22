@@ -4,7 +4,7 @@
   tasks:
     - name: Clone My Repo
       git:
-        repo: https://github.com/xadips/kursinis-benchmark
+        repo: https://github.com/xadips/configuration-system-benchmark
         dest: /tmp/repo
       become: true
 

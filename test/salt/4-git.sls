@@ -1,6 +1,6 @@
 my_repo:
   git.latest:
-    - name: https://github.com/xadips/kursinis-benchmark
+    - name: https://github.com/xadips/configuration-system-benchmark
     - target: /tmp/repo
 
 kubernetes_repo:

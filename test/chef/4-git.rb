@@ -1,5 +1,5 @@
 git '/tmp/repo' do
-    repository 'https://github.com/xadips/kursinis-benchmark.git'
+    repository 'https://github.com/xadips/configuration-system-benchmark.git'
     revision 'main'
     action :sync
 end
