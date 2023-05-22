@@ -1,21 +1,3 @@
-terraform {
-  required_providers {
-    digitalocean = {
-      source = "digitalocean/digitalocean"
-      version = "~> 2.0"
-    }
-  }
-}
-
-provider "digitalocean" {
-  token = var.do_token
-}
-
-data "digitalocean_ssh_key" "terraform" {
-  name = "arch"
-}
-
-
 resource "digitalocean_droplet" "debian-do" {
     count = var.vm_count
     image = "debian-10-x64"

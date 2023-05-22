@@ -1,4 +1,3 @@
-
 variable "diskBytes" {
     type = number
     # 1024^3 GB * N = how many GB you want in your VM
@@ -49,7 +48,3 @@ variable "port" {
     type = number
     default = 0
 }
-
-
-
-
