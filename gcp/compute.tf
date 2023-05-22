@@ -1,9 +1,3 @@
-provider "google" {
-  project = "configuration-benchmark"
-  region  = "europe-central2"
-  zone    = "europe-central2-b"
-}
-
 resource "google_compute_instance" "debian_instance" {
   name = "debian-${count.index}"
   count = var.vm_count

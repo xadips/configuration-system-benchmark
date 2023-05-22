@@ -1,3 +1,7 @@
+data "digitalocean_ssh_key" "terraform" {
+  name = "arch"
+}
+
 data "template_file" "user_data" {
   template = file("${path.module}/../initconf/cloud_init_${var.tool}.cfg")
 
